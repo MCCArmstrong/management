@@ -1,0 +1,40 @@
+
+{% load static %}
+	<header class="main-heading">
+		<div class="container-fluid">
+			<div class="row">
+
+                    {% if user.is_authenticated %}
+                        <p class="text-success text-center">Welcome, {{ user.username }} to Unicorn </p>
+                    {% endif %}
+				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+					<div class="page-icon">
+						<i class="icon-laptop_windows"></i>
+					</div>
+					<div class="page-title">
+						<h6 class="text-primary">Unicorn Administrative Panel</h6>
+					</div>
+					<div class="container mt-3">
+						<form class="form-inline">
+							<div style="width:500px; margin:0 auto">
+								<input type="text" class="form-control" placeholder="Search Product..." id="search_keyword" style="width:400px; margin:0 auto">
+								<button type="button" class="btn btn-md btn-outline-info" style="border-radius:12%">
+									<span class="icon-youtube_searched_for"></span>
+								</button>
+
+							</div>
+						</form>
+						 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ 						 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+						<script>
+								  $( function() {
+									$( "#search_keyword" ).autocomplete({
+									  source: ['Javascript', 'Php']
+									});
+								  } );
+  						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>

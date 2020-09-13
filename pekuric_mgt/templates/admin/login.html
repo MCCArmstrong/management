@@ -1,0 +1,53 @@
+{% extends 'admin/admin_base.html' %}
+{% load static %}
+{% load generic %}
+{% block content %}
+
+		<div class="container">
+			<div class="login-screen row align-items-center">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+					<form action="" method="post" enctype="multipart/form-data">
+						{% csrf_token%}
+						<div class="login-container">
+							<div class="row no-gutters">
+								<div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+
+									<div class="login-box">
+										<a href="#" class="login-logo">
+											<img src="{% static 'admin/img/unify.png' %}" alt="Unicorn Dev group" />
+										</a>
+										 {% for field in form %}
+										<div class="form-group">
+                                            {{field.label_tag}}
+                                            <div class="input-group">
+											 {{field|addclass:'form-control'}}
+                                			{% if field.name == 'email' %}
+											<span class="input-group-addon" id="email"><i class="icon-account_circle"></i></span>
+											{% endif %}
+                                            {% if 'password' in field.name %}
+											<span class="input-group-addon" id="password"><i class="icon-verified_user"></i></span>
+											{% endif %}
+										</div>
+                                        </div>
+
+										{% endfor %}
+										<div class="actions clearfix">
+											<button type="submit" class="btn btn-primary">Signin</button>
+										</div>
+										<div class="or"></div>
+										<div class="mt-4">
+											<a href="{% url 'pekuric_mgt:user-signup' %}" class="additional-link">Do you have an account?<span>Signup</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+									<div class="signup-slider"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+{% endblock %}

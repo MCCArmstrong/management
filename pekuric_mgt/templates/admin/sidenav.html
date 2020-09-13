@@ -1,0 +1,108 @@
+
+{% load static %}
+	<nav class="side-nav">
+							<!-- BEGIN: side-nav-content -->
+		<ul class="unifyMenu" id="unifyMenu">
+			<li class="active selected">
+				<a href="{% url 'pekuric_mgt:panel' %}"  aria-expanded="false">
+					<span class="has-icon">
+						<i class="icon-laptop_windows"></i>
+					</span>
+					<span class="nav-title">Dashboards</span>
+				</a>
+
+			</li>
+
+
+			<li class="menu-header">
+			</li>
+			<li>
+				<a href="#" class="has-arrow" aria-expanded="false">
+					<span class="has-icon">
+						<i class="icon-layers"></i>
+					</span>
+					<span class="nav-title">Product</span>
+				</a>
+				<ul aria-expanded="false">
+					<li>
+						<a href="{% url 'pekuric_mgt:gallery' %}">Gallery</a>
+					</li>
+					<li>
+						<a href="{% url 'pekuric_mgt:portfolio' %}">Portfolio</a>
+					</li>
+					<li>
+						<a href="{%url 'pekuric_mgt:preview' %}">Overview</a>
+					</li>
+					<li>
+						<a href="{%url 'pekuric_mgt:ratings' %}">Product-Ratings</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-header">
+			</li>
+			<li>
+				<a href="{% url 'pekuric_mgt:payment-info' %}">
+					<span class="has-icon">
+						<i class="icon-credit-card"></i>
+					</span>
+					<span class="nav-title">Wallet</span>
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'pekuric_mgt:create-about' %}">
+					<span class="has-icon">
+						<i class="icon-spinner9"></i>
+					</span>
+					<span class="nav-title">About</span>
+				</a>
+			</li>
+			<li>
+				<a href="{% url 'pekuric_mgt:create-services' %}">
+					<span class="has-icon">
+						<i class="icon-database"></i>
+					</span>
+					<span class="nav-title">Services</span>
+				</a>
+			</li>
+			<li>
+				<a href="datatables.html">
+					<span class="has-icon">
+						<i class="icon-border_all"></i>
+					</span>
+					<span class="nav-title">Data Tables</span>
+				</a>
+			</li>
+			<li class="menu-header">
+				<hr>
+			</li>
+			<li>
+				<a href="#" class="has-arrow" aria-expanded="false">
+										<span class="has-icon">
+											<i class="icon-lock_outline"></i>
+										</span>
+										<span class="nav-title">Authentication</span>
+									</a>
+									<ul aria-expanded="false">
+										<li>
+											<a href='login.html'>Login</a>
+										</li>
+										<li>
+											<a href='signup.html'>Signup</a>
+										</li>
+										<li>
+											<a href='forgot-pwd.html'>Forgot Password</a>
+										</li>
+										<li>
+											<a href="locked-screen.html">Locked Screen</a>
+										</li>
+										<li>
+											<a href='error404.html'>Error 404</a>
+										</li>
+										<li>
+											<a href='error505.html'>Error 505</a>
+										</li>
+									</ul>
+								</li>
+		</ul>
+							<!-- END: side-nav-content -->
+	</nav>

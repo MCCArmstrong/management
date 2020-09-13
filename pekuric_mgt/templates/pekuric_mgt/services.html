@@ -1,0 +1,154 @@
+{% extends 'pekuric_mgt/base.html' %}
+{% load static %}
+{% block body %}
+<!--body content wrap start-->
+<div class="main">
+
+    <!--header section start-->
+  {% include 'pekuric_mgt/section.html' %}
+
+    <!--services section start-->
+    <section class="services-section ptb-100 gray-light-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="section-heading text-center mb-5">
+                        <h2>Our Services</h2>
+                        <p>Efficiently aggregate end-to-end core competencies without maintainable ideas. Dynamically
+                            foster tactical solutions without enabled value.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for unicornService in object_list %}
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="services-single animated-hover text-center p-5 my-md-3 my-lg-3 my-sm-0 shadow-sm white-bg rounded">
+                        <img src="{{ unicornService.service_icon.url }}" alt="consulting" width="80" class="mb-3">
+                        <h5>{{ unicornService.service_title }}</h5>
+                        <p class="mb-0">{{ unicornService.service_description|truncatewords:15 }}</p>
+                        <a href="{% url 'pekuric_mgt:detail-service' unicornService.id %}" target="_blank" class="detail-link mt-4">Read more <span class="ti-arrow-right"></span></a>
+                    </div>
+                </div>
+               {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--services section end-->
+
+
+
+    <!--contact us section start-->
+    <section class="contact-us-section ptb-100">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-md-6">
+<!--                    Accordion For Services-->
+                    <div id="accordion-1" class="accordion accordion-faq mt-5">
+                                <!-- Accordion card 1 -->
+                                <div class="card">
+                                    <div class="card-header py-3 collapsed" id="heading-1-1" data-toggle="collapse" role="button" data-target="#collapse-1-1" aria-expanded="false" aria-controls="collapse-1-1">
+                                        <h6 class="mb-0"><span class="ti-receipt mr-3"></span> Philosophy</h6>
+                                    </div>
+                                    <div id="collapse-1-1" class="collapse" aria-labelledby="heading-1-1" data-parent="#accordion-1" style="">
+                                        <div class="card-body">
+                                            <p>Uniquely leverage other's distinctive infomediaries rather than leveraged supply chains. Continually seize distributed collaboration and idea-sharing whereas user.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion card 2 -->
+                                <div class="card">
+                                    <div class="card-header py-3" id="heading-1-2" data-toggle="collapse" role="button" data-target="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
+                                        <h6 class="mb-0"><span class="ti-gallery mr-3"></span>Aims and Objectives</h6>
+                                    </div>
+                                    <div id="collapse-1-2" class="collapse" aria-labelledby="heading-1-2" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                            <p>Rapidiously incentivize virtual e-commerce and exceptional e-tailers. Progressively network focused catalysts for change without orthogonal benefits. Dramatically empower.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion card 3 -->
+                                <div class="card">
+                                    <div class="card-header py-3" id="heading-1-3" data-toggle="collapse" role="button" data-target="#collapse-1-3" aria-expanded="false" aria-controls="collapse-1-3">
+                                        <h6 class="mb-0"><span class="ti-wallet mr-3"></span> How do I see previous orders?
+                                        </h6>
+                                    </div>
+                                    <div id="collapse-1-3" class="collapse" aria-labelledby="heading-1-3" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                            <p>Proactively monetize long-term high-impact innovation and scalable relationships. Dynamically mesh principle-centered functionalities before next-generation best practices. Distinctively empower.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="contact-us-content">
+                        <h2>Looking for a excellent Business idea?</h2>
+                        <p class="lead">Seamlessly deliver pandemic e-services and next-generation initiatives.</p>
+
+                        <a href="#" class="btn outline-btn align-items-center">Get Directions <span class="ti-arrow-right pl-2"></span></a>
+
+                        <hr class="my-5">
+
+                        <h5>Our Headquarters</h5>
+                        <address>
+                            100 yellow house, Mn <br>
+                            Factory, United State, 13420
+                        </address>
+                        <br>
+                        <span>Phone: +1234567890123</span> <br>
+                        <span>Email: <a href="#" class="link-color">email@yourdomain.com</a></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--contact us section end-->
+
+
+    <!--client section start-->
+    <div class="client-section ptb-100 gray-light-bg">
+        <div class="container">
+            <!--clients logo start-->
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme clients-carousel dot-indicator">
+                        <div class="item single-client">
+                            <img src="{% get_static_prefix %}base/img/clients-logo-01.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item single-client">
+                            <img src="{% get_static_prefix %}base/img/clients-logo-02.png" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item single-client">
+                            <img src="{% static 'base/img/clients-logo-03.png' %}" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item single-client">
+                            <img src="{% static 'base/img/clients-logo-04.png' %}" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item single-client">
+                            <img src="{% static 'base/img/clients-logo-05.png' %}" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item single-client">
+                            <img src="{% static 'base/img/clients-logo-06.png' %}" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item single-client">
+                            <img src="{% static 'base/img/clients-logo-07.png' %}" alt="client logo" class="client-img">
+                        </div>
+                        <div class="item single-client">
+                            <img src="{%  static 'base/img/clients-logo-08.png' %}" alt="client logo" class="client-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--clients logo end-->
+        </div>
+    </div>
+    <!--client section start-->
+</div>
+<!--body content wrap end-->
+
+<!--footer section start-->
+{% include 'pekuric_mgt/footer.html' %}
+<!--footer section end-->
+{% include 'pekuric_mgt/script.html' %}
+{% endblock %}

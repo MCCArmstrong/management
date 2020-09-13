@@ -1,0 +1,14 @@
+{% for field in form %}
+    <div class="box">
+            <!--SIGN IN FORM-->
+            <div class="panel mb-none">
+                <div class="panel-content bg-scale-0">
+                     <div class="form-group">
+                           <span>{{ field.errors }}</span>
+                     </div>
+                    <label class="">{{ field.label_tag}}</label>
+                    <div>{{ field }}</div>
+                </div>
+            </div>
+        </div>
+{% endfor %}

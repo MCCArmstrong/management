@@ -1,0 +1,157 @@
+{% extends 'pekuric_mgt/base.html' %}
+{% load static %}
+{% block body %}
+
+<!--body content wrap start-->
+<div class="main">
+
+    <!--header section start-->
+     <section class="hero-section ptb-100 gradient-overlay"
+             style="background: url('{% get_static_prefix %}base/img/header-bg-5.jpg')no-repeat center center / cover">
+        <div class="hero-bottom-shape-two"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--header section end-->
+    <div class="container-fluid pt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Unicorn Services</h5>
+                        <p class="p-2"  style="background: url('{% get_static_prefix %}base/img/service.jpg')no-repeat center center / cover">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing eli
+                            t. A deserunt dignissimos facere harum, molestiae molestias neque quibusdam quod,
+                            sapiente, sed ut voluptatem. Adipisci cumque ea excepturi inventore numquam odio quia.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing eli
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--services details start-->
+    <section class="service-details-section ptb-100">
+        <div class="container pt-">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div class="service-details-wrap">
+                        <img src="{{ object.service_icon.url }}" alt="unicorn-services" class="img-fluid rounded shadow-sm"/>
+                        <div class="services-detail-content mt-4">
+                            <h4>Detail Description</h4>
+                            <p>{{ object.service_description }}</p>
+
+                            <div class="row mt-5">
+                                <div class="col-md-6">
+                                    <div class="img-wrap">
+                                        <img src="{% get_static_prefix %}base/img/images.jpg" alt="unicorn-services" class="img-fluid"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled tech-feature-list">
+                                        <li class="py-1"><span class="ti-check-box mr-2 color-secondary"></span><strong>Foreclosure</strong>
+                                            consultant Human consulting
+                                        </li>
+                                        <li class="py-1"><span class="ti-check-box mr-2 color-secondary"></span><strong>Corporate</strong>
+                                            Immigration, Information
+                                        </li>
+                                        <li class="py-1"><span class="ti-check-box mr-2 color-secondary"></span><strong>SEO</strong> Optimization consultant</li>
+                                        <li class="py-1"><span class="ti-check-box mr-2 color-secondary"></span><strong>Rapidiously</strong> conceptualize communities</li>
+                                        <li class="py-1"><span class="ti-check-box mr-2 color-secondary"></span><strong>Consultant</strong>
+                                            pharmacist Creative consultant
+                                        </li>
+                                        <li class="py-1"><span class="ti-check-box mr-2 color-secondary"></span><strong>Monotonectally</strong>
+                                            customize B2B core competencies
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="sidebar-right pl-4">
+
+                        <!--all services list-->
+                        <aside class="widget widget-categories">
+                            <div class="widget-title">
+                                <h5>All Services</h5>
+                            </div>
+                            <ul class="all-service-list">
+                                <li><a href="#">Software Development</a></li>
+                                <li><a href="#">Data Analytics</a></li>
+                                <li><a href="#">Software Trainings</a></li>
+                                <li><a href="#">Software Security</a></li>
+                            </ul>
+                        </aside>
+
+                        <!--need help-->
+                        <aside class="widget widget-categories">
+                            <div class="widget-title">
+                                <h5>Need Help?</h5>
+                            </div>
+                            <p>We are available in 24/7 hours for dedicated support</p>
+                            <ul class="primary-list mt-25">
+                                <li><span class="ti-location-pin mr-2 color-primary"></span> 123 Yellow House, Mn 9007
+                                </li>
+                                <li><span class="ti-mobile mr-2 color-primary"></span> (+123) 456-789-012</li>
+                                <li><span class="ti-email mr-2 color-primary"></span> youname@domail.com</li>
+                            </ul>
+                        </aside>
+
+                        <!-- Subscribe widget-->
+                        <aside class="widget widget-categories">
+                            <div class="widget-title">
+                                <h5>Newsletter</h5>
+                            </div>
+                            <p>Enter your email address below to subscribe to my newsletter</p>
+                            <form action="#" method="post"
+                                  class="d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control input" id="email-footer" name="email"
+                                       placeholder="info@yourdomain.com">
+                                <button type="submit" class="btn secondary-solid-btn btn-block btn-not-rounded mt-3">Subscribe
+                                </button>
+                            </form>
+                        </aside>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--services details end-->
+
+    <!--call to action section start-->
+    <section class="call-to-action py-5 gray-light-bg">
+        <div class="container">
+            <div class="row justify-content-around align-items-center">
+                <div class="col-md-7">
+                    <div class="subscribe-content">
+                        <h3 class="mb-1">Consulting Agency for Your Business</h3>
+                        <p>Rapidiously engage fully tested e-commerce with progressive architectures.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="action-btn text-lg-right text-sm-left">
+                        <a href="#" class="btn secondary-solid-btn">Become a Client</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--call to action section end-->
+
+
+</div>
+<!--body content wrap end-->
+
+<!--footer section start-->
+{% include 'pekuric_mgt/footer.html' %}
+<!--footer section end-->
+{% include 'pekuric_mgt/script.html' %}
+{% endblock %}

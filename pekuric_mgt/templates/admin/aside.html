@@ -1,0 +1,58 @@
+{% load static %}
+	<aside class="app-side" id="app-side" style="position:fixed !important">
+					<!-- BEGIN .side-content -->
+					<div class="side-content ">
+						<!-- BEGIN .user-profile -->
+						<div class="user-profile">
+                            <a href=""  type="buttton" class="btn" data-toggle="modal" 	data-target="#profileModal" >
+                                <img src="{% static 'admin/img/user.png' %}" class="profile-thumb" alt="User Thumb"></a>
+							        <h6 class="profile-name">{{request.user}}</h6>
+<!--                                    Modal for profile pics-->
+
+<!--                                    End  Modal-->
+							<ul class="profile-actions">
+								<li>
+									<a href="#">
+										<i class="icon-social-skype"></i>
+										<span class="count-label red"></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-social-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="login.html">
+										<i class="icon-export"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- END .user-profile -->
+						<!-- BEGIN .side-nav -->
+					    	{% include 'admin/sidenav.html' %}
+						<!-- END: .side-nav -->
+					</div>
+
+
+					<!-- END: .side-content -->
+				</aside>
+
+
+                                                    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                          <div class="modal-dialog modal-sm" role="document">
+																<div class="modal-content">
+<!--																	<div class="modal-header">-->
+<!--																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--																			<span aria-hidden="true">&times;</span>-->
+<!--																		</button>-->
+<!--																	</div>-->
+																	<div class="modal-body">
+																		Upload a photo
+																		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static 'admin/icons/profile.png' %}" width="60" height="60">
+																		<input type="file" class="form control" name="profile-pics">
+																	</div>
+																</div>
+                                                          </div>
+                                                      </div>

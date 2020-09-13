@@ -1,0 +1,180 @@
+{% extends 'admin/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+	{% block body %}
+
+		<!-- BEGIN .app-wrap -->
+		<div class="app-wrap">
+			<!-- BEGIN .app-heading -->
+			{% include 'admin/app_header.html' %}
+			<!-- END: .app-heading -->
+			<!-- BEGIN .app-container -->
+			<div class="app-container">
+				<!-- BEGIN .app-side -->
+				{% include 'admin/aside.html' %}
+				<!-- END: .app-side -->
+
+				<!-- BEGIN .app-main -->
+				<div class="app-main">
+					<!-- BEGIN .main-heading -->
+					{% include 'admin/app_mainheader.html' %}
+					<!-- END: .main-heading -->
+					<!-- BEGIN .main-content -->
+					<div class="main-content">
+						<!-- Row start -->
+						<div class="row justify-content-md-center gutters">
+							<div class="col-xl-9 col-lg-9 col-md-9 col-sm-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="invoice-container">
+											<!-- Row start -->
+											<div class="row gutters">
+												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+													<a href="{% url 'pekuric_mgt:make-request' %}" class="btn btn-sm btn-success"
+														   style="box-shadow: 4px 4px 6px grey; ">
+															<small>Request a Product&nbsp;<span class="icon-spa"></span></small>
+													</a>
+                                                </div>
+												<div class="col-lg-6 col-md-6 col-sm-6">
+													<h6 class="text-right text-secondary">Portfolio Gallery</h6>
+												</div>
+											</div>
+											<!-- Row end -->
+
+											<div class="spacer30"></div>
+
+
+
+											<div class="spacer50"></div>
+
+                                          <!-- Service Row start-->
+											<!-- Row start -->
+												<div class="row gutters">
+							                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+														<div class="card">
+															<div class="card-header">Portfolio Slides</div>
+																	<div class="card-body">
+																		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+																			<ol class="carousel-indicators">
+																			  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+																			</ol>
+
+																			<div class="carousel-inner">
+																				{% for ProductPortfolio in object_list %}
+																				<div class="carousel-item active">
+																					<img class="d-block w-100" src="{{ ProductPortfolio.portfolio_file.url }}" alt="First slide">
+																					<div class="carousel-caption d-none d-md-block">
+		<!--																			  <h3>First slide label</h3>-->
+																					  <p></p>
+																					</div>
+																				  </div>
+																				{% endfor %}
+																			</div>
+																		<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+																		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+																		  <span class="sr-only">Previous</span>
+																		</a>
+																		<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+																		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+																		  <span class="sr-only">Next</span>
+																		</a>
+																	</div>
+																</div>
+
+															</div>
+													</div>
+					                        	</div>
+												<div class="spacer50"></div>
+
+											<!-- Row start -->
+											<div class="row gutters">
+
+												<div class="col-lg-12 col-md-12 col-sm-12">
+
+													<table class="table table-hover table-bordered table-responsive table-striped">
+														<thead>
+															<tr>
+																<th><small><b>Product ID</b></small></th>
+																<th><small><b>Product Name</b></small></th>
+																<th><small><b>Date Created</b></small></th>
+																<th><small><b>Price</b></small></th>
+																<th><small><b>Product Description</b></small></th>
+																<th><small><b>Action</b></small></th>
+															</tr>
+														</thead>
+														<tbody>
+														{% for ProductPortfolio in object_list %}
+															<tr>
+																<td>{{ ProductPortfolio.id }}</td>
+																<td>{{ ProductPortfolio.product_name }}</td>
+																<td>{{ ProductPortfolio.date_created }}</td>
+																<td>₦&nbsp;{{ ProductPortfolio.product_price }}</td>
+																<td>{{ ProductPortfolio.product_description }}</td>
+																<td>
+																	 <a href="" type="button" class="btn btn-outline-primary btn-xs"  style="border-radius:8%"><span class="icon-edit2"></span></a>
+                                                                        <button type="button" class="btn btn-outline-danger btn-xs" data-toggle="modal"
+																				data-target="#exampleModal"  style="border-radius:8%"><span class="icon-trash2"></span></button>
+																</td>
+															</tr>
+															<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+																	<div class="modal-dialog modal-sm" role="document">
+																<div class="modal-content">
+																	<div class="modal-header">
+																		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																			<span aria-hidden="true">&times;</span>
+																		</button>
+																	</div>
+																	<div class="modal-body" >
+																		<small>
+																			This data can't be recovered.Are you sure?
+																			<img src="{% static 'admin/icons/error.png' %}" height="%0" width="50">
+																		</small>
+																	</div>
+																	<div class="modal-footer" >
+																		<button type="button" class="btn btn-default btn-sm" data-dismiss="modal"><small>Cancel</small></button>
+																		<form action="{% url 'pekuric_mgt:portfolio-delete' pk=ProductPortfolio.pk %}" method="POST">
+																			{% csrf_token %}
+																			<a  href="{% url 'pekuric_mgt:portfolio-delete' ProductPortfolio.id %}" class="btn btn-danger btn-sm" type="Button"><small>Continue</small></a>
+																		</form>
+																	</div>
+																</div>
+															</div>
+																</div>
+														{% endfor %}
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<!-- Row end -->
+
+											<!-- Row end -->
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+													<h2 class="text-right">
+														<a href="{{request.META.HTTP_REFERER}}" class="btn btn-sm  btn-center"
+														   style="Background-color:Violet; color:white; box-shadow: 4px 4px 6px grey; ">
+															<small>Go Back &raquo;</small>
+														</a>
+													</h2>
+												</div>
+                                        <!-- Service Row End-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Row end -->
+					</div>
+					<!-- END: .main-content -->
+				</div>
+				<!-- END: .app-main -->
+			</div>
+			<!-- END: .app-container -->
+			<!-- BEGIN .main-footer -->
+			{% include 'admin/footer.html' %}
+			<!-- END: .main-footer -->
+		</div>
+		<!-- END: .app-wrap -->
+
+
+{% include 'admin/script.html' %}
+{% endblock %}

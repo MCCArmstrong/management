@@ -1,0 +1,498 @@
+{% extends 'pekuric_mgt/base.html' %}
+{% load static %}
+
+
+
+
+<!--loader start-->
+
+<!--loader end-->
+
+<!--header section start-->
+{% include 'pekuric_mgt/navbar.html' %}
+<!--header section end-->
+
+<!--body content wrap start-->
+{% block body %}
+<div class="main">
+    <!--hero section start-->
+    <section class="hero-equal-height pt-165 pb-100" style="background: url('{% static 'base/img/bg-illustration.svg' %}')no-repeat center center / cover">
+        <div class="hero-bottom-shape-two" style="background: url('{%static 'base/img/hero-bottom-shape.svg' %}')no-repeat bottom center"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-6">
+                    <div class="hero-slider-content text-white z-index position-relative">
+                        <h2 class="text-white">We're Unicorn</h2>
+                        <p>We bring development to your doorsteps. We're building a world of our dreams through technology.</p>
+
+                        <div class="action-btns mt-3">
+                            <a href="#" class="btn accent-solid-btn">Come in</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="hero-animation-img">
+                        <img src="{%static 'base/img/hero-animation-01.svg' %}" alt="hero" class="img-fluid d-none d-lg-block animation-two" width="180">
+                        <img src="{%static 'base/img/hero-single-img-5.svg' %}" alt="hero" class="animation-one img-fluid custom-width">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--hero section end-->
+
+
+    <!--about us section start-->
+    <section class="about-us-section pb-100">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-12 col-lg-6">
+                    <div class="video-promo-content mb-md-4 mb-lg-0">
+                        <h3>Leverage Data Across Your Organization</h3>
+                        <p>Synergistically envisioneer impactful catalysts for change vis-a-vis flexible infrastructures. Rapidiously matrix real-time portals rather than fully researched opportunities. Appropriately implement corporate infrastructures after high-payoff schemas. </p>
+                        <ul class="list-unstyled tech-feature-list">
+                            <li class="py-1"><span class="ti-control-forward mr-2 color-secondary"></span><strong>Customizable </strong> to store needs</li>
+                            <li class="py-1"><span class="ti-control-forward mr-2 color-secondary"></span>Extensible <strong>easy</strong> integrations</li>
+                            <li class="py-1"><span class="ti-control-forward mr-2 color-secondary"></span><strong>Security</strong> Accounting Fundamentals</li>
+                            <li class="py-1"><span class="ti-control-forward mr-2 color-secondary"></span><strong>Embedded </strong> learning System</li>
+                            <li class="py-1"><span class="ti-control-forward mr-2 color-secondary"></span><strong>Governance </strong> and Audit compliant</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="image-wrap">
+                        <img src="{% static 'base/img/hero-single-img-1.svg' %}" alt="video" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--about us section end-->
+
+    <!--services section start-->
+    <section class="services-section ptb-100 gray-light-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="section-heading text-center mb-5">
+                        <h3>Our Services</h3>
+                        <p>At Unicorn product quality is every team interest. We ensure to think  differently as product-quality and client satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="services-single animated-hover text-center p-5 my-md-3 my-lg-3 my-sm-0 shadow-sm white-bg rounded">
+                        <img src="{% static 'base/img/consult.svg' %}" alt="consulting" width="80" class="mb-3">
+                        <h5>Tech Consulting</h5>
+                        <p class="mb-0">Progressively empower business "outside the box" thinking with resource-leveling
+                            partnerships.</p>
+                        <a href="services-details.html" target="_blank" class="detail-link mt-4">Read more <span class="ti-arrow-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="services-single animated-hover text-center p-5 my-md-3 my-lg-3 my-sm-0 shadow-sm white-bg rounded">
+                        <img src="{%static 'base/img/data-security.svg' %}" alt="consulting" width="80" class="mb-3">
+                        <h5>Software Security</h5>
+                        <p class="mb-0">Progressively empower business "outside the box" thinking with resource-leveling
+                            partnerships.</p>
+                        <a href="services-details.html" target="_blank" class="detail-link mt-4">Read more <span class="ti-arrow-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="services-single animated-hover text-center p-5 my-md-3 my-lg-3 my-sm-0 shadow-sm white-bg rounded">
+                        <img src="{%static 'base/img/data-analytics.svg' %}" alt="consulting" width="80" class="mb-3">
+                        <h5>Software Trainings</h5>
+                        <p class="mb-0">Progressively empower business "outside the box" thinking with resource-leveling
+                            partnerships.</p>
+                        <a href="services-details.html" target="_blank" class="detail-link mt-4">Read more <span class="ti-arrow-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--services section end-->
+
+    <!--promo section start-->
+
+    <!--promo section end-->
+
+    <!--our work process section start-->
+    <section class="work-process-new ptb-100 gray-light-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 col-lg-8">
+                    <div class="section-heading text-center mb-5">
+                        <h3>Development Cycle</h3>
+                        <p>Distinctively grow go forward manufactured products and optimal networks. Enthusiastically
+                            disseminate user-centric outsourcing through.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="work-process-wrap text-center">
+                        <div class="single-work-process">
+                            <div class="work-process-icon-wrap secondary-bg rounded">
+                                <i class="ti-vector icon-md text-white"></i>
+                                <span class="process-step white-bg color-primary shadow-sm">1</span>
+                            </div>
+                            <span class="work-process-divider"></span>
+                            <div class="work-process-content mt-4">
+                                <h5>Data Records</h5>
+                                <p>Synergistically actualize B2C information with team driven. </p>
+                            </div>
+                        </div>
+                        <div class="single-work-process">
+                            <div class="work-process-icon-wrap secondary-bg rounded">
+                                <i class="ti-layout-list-thumb icon-md text-white"></i>
+                                <span class="process-step white-bg color-primary shadow-sm">2</span>
+                            </div>
+                            <span class="work-process-divider"></span>
+                            <div class="work-process-content mt-4">
+                                <h5>Data Translator</h5>
+                                <p>Dramatically simplify sustainable collaboration and idea-sharing. </p>
+                            </div>
+                        </div>
+                        <div class="single-work-process">
+                            <div class="work-process-icon-wrap secondary-bg rounded">
+                                <i class="ti-palette icon-md text-white"></i>
+                                <span class="process-step white-bg color-primary shadow-sm">3</span>
+                            </div>
+                            <span class="work-process-divider"></span>
+                            <div class="work-process-content mt-4">
+                                <h5>AI Algorithm</h5>
+                                <p>Compellingly harness reliable methodologies and orthogonal. </p>
+                            </div>
+                        </div>
+                        <div class="single-work-process">
+                            <div class="work-process-icon-wrap secondary-bg rounded">
+                                <i class="ti-cup icon-md text-white"></i>
+                                <span class="process-step white-bg color-primary shadow-sm">4</span>
+                            </div>
+                            <span class="work-process-divider"></span>
+                            <div class="work-process-content mt-4">
+                                <h5>Outage Prediction</h5>
+                                <p>Authoritatively provide access to user-centric content through. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--our work process section end-->
+
+    <!--our work or portfolio section start-->
+    <section class="our-portfolio-section ptb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-heading text-center mb-5">
+                        <h2>Check Our Quality Work</h2>
+                        <p class="lead">Dynamically pursue reliable convergence rather than 24/7 process improvements. Intrinsicly
+                            develop end-to-end customer service without extensive data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center pb-2">
+                        <button type="button" class="filter-btn" data-mixitup-control data-filter="all">All</button>
+                        <button type="button" class="filter-btn" data-mixitup-control data-filter=".branding">Data Visualization</button>
+                        <button type="button" class="filter-btn" data-mixitup-control data-filter=".animation">Software Development</button>
+                        <button type="button" class="filter-btn" data-mixitup-control data-filter=".other">Others</button>
+                    </div>
+                    <div class="portfolio-container" id="MixItUp">
+                        <div class="mix portfolio-item branding" data-ref="mixitup-target">
+                            <div class="portfolio-wrapper">
+                                <a href="project-details.html" target="_blank">
+                                    <div class="content-overlay"></div>
+                                    <img class="img-fluid" src="{%static 'base/img/portfolios/3.jpg' %}" alt="portfolio"/>
+                                    <div class="content-details fadeIn-bottom text-white">
+                                        <h5 class="text-white mb-1">Creative Design</h5>
+                                        <p>Design</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mix portfolio-item other animation" data-ref="mixitup-target">
+                            <div class="portfolio-wrapper">
+                                <a href="project-details.html" target="_blank">
+                                    <div class="content-overlay"></div>
+                                    <img class="img-fluid" src="{%static 'base/img/portfolios/2.jpg' %}" alt="portfolio"/>
+                                    <div class="content-details fadeIn-bottom text-white">
+                                        <h5 class="text-white mb-1">Web UI/UX Design</h5>
+                                        <p>Web, Design</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mix portfolio-item animation" data-ref="mixitup-target">
+                            <div class="portfolio-wrapper">
+                                <a href="project-details.html" target="_blank">
+                                    <div class="content-overlay"></div>
+                                    <img class="img-fluid" src="{%static 'base/img/portfolios/4.jpg' %}" alt="portfolio"/>
+                                    <div class="content-details fadeIn-bottom text-white">
+                                        <h5 class="text-white mb-1">Corporate Flyer Design</h5>
+                                        <p>Flyer Design</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mix portfolio-item branding" data-ref="mixitup-target">
+                            <div class="portfolio-wrapper">
+                                <a href="project-details.html" target="_blank">
+                                    <div class="content-overlay"></div>
+                                    <img class="img-fluid" src="{%static 'base/img/portfolios/1.jpg' %}" alt="portfolio"/>
+                                    <div class="content-details fadeIn-bottom text-white">
+                                        <h5 class="text-white mb-1">Web UI/UX Design</h5>
+                                        <p>Web, Design</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mix portfolio-item animation other" data-ref="mixitup-target">
+                            <div class="portfolio-wrapper">
+                                <a href="project-details.html" target="_blank">
+                                    <div class="content-overlay"></div>
+                                    <img class="img-fluid" src="{%static 'base/img/portfolios/5.jpg' %}" alt="portfolio"/>
+                                    <div class="content-details fadeIn-bottom text-white">
+                                        <h5 class="text-white mb-1">Wall Painting Design</h5>
+                                        <p>Painting Design</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mix portfolio-item branding " data-ref="mixitup-target">
+                            <div class="portfolio-wrapper">
+                                <a href="project-details.html" target="_blank">
+                                    <div class="content-overlay"></div>
+                                    <img class="img-fluid" src="{%static 'base/img/portfolios/6.jpg' %}" alt="portfolio"/>
+                                    <div class="content-details fadeIn-bottom text-white">
+                                        <h5 class="text-white mb-1">Corporate Identity Design</h5>
+                                        <p>Corporate Design</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gap"></div>
+                        <div class="gap"></div>
+                        <div class="gap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--our work or portfolio section end-->
+
+    <!--blog section start-->
+    <section class="our-blog-section ptb-100 gray-light-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="section-heading mb-5">
+                        <h3>Our Latest News</h3>
+                        <p>
+                            Enthusiastically drive revolutionary opportunities before emerging leadership. Distinctively
+                            transform tactical methods of empowerment via resource.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-blog-card card border-0 shadow-sm">
+                        <span class="category position-absolute badge badge-pill badge-primary">Lifestyle</span>
+                        <img src="{%static 'base/img/blog/1.jpg' %}" class="card-img-top position-relative" alt="blog">
+                        <div class="card-body">
+                            <h3 class="h5 mb-2 card-title"><a href="#">Appropriately productize fully</a></h3>
+                            <div class="post-meta mb-2">
+                                <ul class="list-inline meta-list">
+                                    <li class="list-inline-item">Jan 21, 2019</li>
+                                    <li class="list-inline-item"><span>45</span> Comments</li>
+                                    <li class="list-inline-item"><span>10</span> Share</li>
+                                </ul>
+                            </div>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk.</p>
+                            <a href="#" class="detail-link">Read more <span class="ti-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-blog-card card border-0 shadow-sm">
+                        <span class="category position-absolute badge badge-pill badge-danger">Team</span>
+                        <img src="{%static 'base/img/blog/2.jpg' %}" class="card-img-top position-relative" alt="blog">
+                        <div class="card-body">
+                            <h3 class="h5 mb-2 card-title"><a href="#">Quickly formulate backend</a></h3>
+                            <div class="post-meta mb-2">
+                                <ul class="list-inline meta-list">
+                                    <li class="list-inline-item">May 26, 2019</li>
+                                    <li class="list-inline-item"><span>30</span> Comments</li>
+                                    <li class="list-inline-item"><span>5</span> Share</li>
+                                </ul>
+                            </div>
+                            <p class="card-text">Synergistically engage effective ROI after customer directed partnerships.</p>
+                            <a href="#" class="detail-link">Read more <span class="ti-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-blog-card card border-0 shadow-sm">
+                        <span class="category position-absolute badge badge-pill badge-info">Science</span>
+                        <img src="{%static 'base/img/blog/3.jpg' %}" class="card-img-top" alt="blog">
+                        <div class="card-body">
+                            <h3 class="h5 mb-2 card-title"><a href="#">Objectively extend extensive</a></h3>
+                            <div class="post-meta mb-2">
+                                <ul class="list-inline meta-list">
+                                    <li class="list-inline-item">Apr 25, 2019</li>
+                                    <li class="list-inline-item"><span>41</span> Comments</li>
+                                    <li class="list-inline-item"><span>30</span> Share</li>
+                                </ul>
+                            </div>
+                            <p class="card-text">Holisticly mesh open-source leadership rather than proactive users. </p>
+                            <a href="#" class="detail-link">Read more <span class="ti-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--blog section end-->
+
+    <!--testimonial section start-->
+    <section class="testimonial-section ptb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 col-lg-8">
+                    <div class="section-heading mb-5 text-center">
+                        <h2>Client Remark</h2>
+                        <p class="lead">
+                            Rapidiously morph transparent internal or "organic" sources whereas resource sucking
+                            e-business. Conveniently innovate compelling internal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    <div class="testimonial-single shadow-sm gray-light-bg rounded p-4">
+                        <blockquote>
+                            Assertively procrastinate distributed relationships whereas equity invested intellectual capital everything energistically underwhelm proactive.
+                        </blockquote>
+                        <div class="client-ratting mt-2">
+                            <ul class="list-inline client-ratting-list">
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                            </ul>
+                            <h6 class="font-weight-bold">5.0 <small class="font-weight-lighter">BizBite</small></h6>
+                        </div>
+                    </div>
+                    <div class="client-info-wrap d-flex align-items-center mt-5">
+                        <div class="client-img mr-3">
+                            <img src="{%static 'base/img/client-1.jpg' %}" alt="client" width="60" class="img-fluid rounded-circle shadow-sm"/>
+                        </div>
+                        <div class="client-info">
+                            <h5 class="mb-0">Austin Cesar</h5>
+                            <p class="mb-0">ThemeTags</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="testimonial-single shadow-sm gray-light-bg rounded p-4">
+                        <blockquote>
+                            Intrinsicly facilitate functional imperatives without next-generation meta-services. Compellingly revolutionize worldwide users vis-a-vis enterprise best practices.
+                        </blockquote>
+                        <div class="client-ratting mt-2">
+                            <ul class="list-inline client-ratting-list">
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                            </ul>
+                            <h6 class="font-weight-bold">5.0 <small class="font-weight-lighter">BizBite</small></h6>
+                        </div>
+                    </div>
+                    <div class="client-info-wrap d-flex align-items-center mt-5">
+                        <div class="client-img mr-3">
+                            <img src="{% static 'base/img/client-2.jpg' %}" alt="client" width="60" class="img-fluid rounded-circle shadow-sm"/>
+                        </div>
+                        <div class="client-info">
+                            <h5 class="mb-0">Pirtle Karol</h5>
+                            <p class="mb-0">ThemeTags</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="testimonial-single shadow-sm gray-light-bg rounded p-4">
+                        <blockquote>
+                            Interactively grow backend scenarios through one paradigms. Distinctively and communicate efficient information without effective meta-services.
+                        </blockquote>
+                        <div class="client-ratting mt-2">
+                            <ul class="list-inline client-ratting-list">
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                                <li class="list-inline-item"><span class="fas fa-star ratting-color"></span></li>
+                            </ul>
+                            <h6 class="font-weight-bold">5.0 <small class="font-weight-lighter">BizBite</small></h6>
+                        </div>
+                    </div>
+                    <div class="client-info-wrap d-flex align-items-center mt-5">
+                        <div class="client-img mr-3">
+                            <img src="{%static 'base/img/client-3.jpg' %}" alt="client" width="60" class="img-fluid rounded-circle shadow-sm"/>
+                        </div>
+                        <div class="client-info">
+                            <h5 class="mb-0">Aminul Islam</h5>
+                            <p class="mb-0">ThemeTags</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--testimonial section end-->
+
+
+    <!--team two section start-->
+
+    <!--team two section end-->
+
+    <!--call to action section start-->
+    <section class="call-to-action py-5">
+        <div class="container">
+            <div class="row justify-content-around align-items-center">
+                <div class="col-md-7">
+                    <div class="subscribe-content">
+                        <h3 class="mb-1">Consulting Agency for Your Business</h3>
+                        <p>Rapidiously engage fully tested e-commerce with progressive architectures.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="action-btn text-lg-right text-sm-left">
+                        <a href="#" class="btn secondary-solid-btn">Contact With Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--call to action section end-->
+
+</div>
+<!--body content wrap end-->
+
+
+<!--footer section start-->
+{% include 'pekuric_mgt/footer.html' %}
+<!--footer section end-->
+
+
+{% include 'pekuric_mgt/script.html' %}
+{% endblock %}

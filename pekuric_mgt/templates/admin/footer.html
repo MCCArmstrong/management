@@ -1,0 +1,6 @@
+{% load static %}
+{% load i18n %}
+<footer class="main-footer fixed-btm">
+				{% now "Y" as current_year %}
+{% blocktrans %}Copyright, Unicorn Inc. All right Reserved {{ current_year }}{% endblocktrans %}
+</footer>

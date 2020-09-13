@@ -1,0 +1,53 @@
+{
+  "name": "box-shadows-css",
+  "description": "A cross-browser collection of CSS box-shadow",
+  "version": "1.0.51",
+  "keywords": [
+    "box-shadow",
+    "css",
+    "cross-browser",
+    "dev",
+    "front-end",
+    "library",
+    "shadows",
+    "web"
+  ],
+  "homepage": "https://madeas.github.io/box-shadows",
+  "author": "Andrej Sharapov <an.sharapov90@gmail.com>",
+  "scripts": {
+    "test": "test-shadows"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madeas/box-shadows.css.git"
+  },
+  "sass": "../scss/box-shadows.scss",
+  "main": "gulpfile.js",
+  "filename": "box-shadows.min.css",
+  "autoupdate": {
+    "source": "git",
+    "target": "git://github.com/madeas/box-shadows.git",
+    "fileMap": [
+      {
+        "basePath": "",
+        "files": [
+          "box-shadows.css",
+          "box-shadows.min.css"
+        ]
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/madeas/box-shadows.css/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {}
+}
